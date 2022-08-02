@@ -26,6 +26,9 @@ const styles = () => ({
     paddingTop: "20px",
     paddingBottom: "10px",
   },
+  layer: {
+    color: { secondary: "#abcabc" },
+  },
 });
 
 const AppLayout = (props) => {
@@ -54,6 +57,7 @@ const AppLayout = (props) => {
   return (
     <div className={classes.content}>
       <Header onNav={animateFrame} />
+      <br />
       <Centered className={classes.centered}>
         <Frame
           animate
@@ -65,7 +69,7 @@ const AppLayout = (props) => {
             <div style={{ padding: "20px" }}>
               <Switch>
                 <Route exact path="/">
-                  <Entery entered={anim.entered} />
+                  <Entery />
                 </Route>
                 <Route exact path="/launch">
                   <Launch

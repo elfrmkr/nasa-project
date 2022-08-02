@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 import Clickable from "./Clickable";
 import Centered from "./Centered";
+import "./header.style.css";
 
 const styles = (theme) => ({
   root: {
@@ -19,9 +20,7 @@ const styles = (theme) => ({
     display: "inherit",
     marginTop: "15px",
   },
-  nav: {
-    display: "inherit",
-  },
+  nav: {},
   banner: {
     display: "inherit",
     fontWeight: "bold",
@@ -39,6 +38,7 @@ const styles = (theme) => ({
   link: {
     color: theme.color.content,
     textDecoration: "none",
+    justifyContent: "end",
   },
   button: {
     padding: [0, theme.padding / 2],
@@ -71,10 +71,10 @@ const Header = (props) => {
           display: "flex",
           marginLeft: "40px",
         }}
-        className={classes.root}
+        className={`${classes.root} header`}
         {...rest}
       >
-        <img
+        {/* <img
           src="/favicon.png"
           alt=""
           className={classes.img}
@@ -83,7 +83,7 @@ const Header = (props) => {
             height: "50px",
             width: "auto",
           }}
-        />
+        /> */}
         <Logo animate size={50} className={classes.logo} layer="header" />
         <Clickable className={classes.clickable} onClick={onNav}>
           <Highlight className={classes.button} animate layer="header">
@@ -98,25 +98,40 @@ const Header = (props) => {
             </Link>
           </Highlight>
         </Clickable>
-        <nav className={`${classes.nav}`} style={{ justifyContent: "end" }}>
+        <nav className={`${classes.nav} topnav-right`}>
           <Clickable className={classes.clickable} onClick={onNav}>
             <Highlight className={classes.button} animate layer="header">
               <Link className={classes.link} to="/launch">
-                <i className="material-icons">check_circle_outline</i>Launch
+                <div className="flex-container rounded-md hover:bg-gray-300">
+                  <div className="flex-child">
+                    <i className="material-icons">check_circle_outline</i>
+                  </div>
+                  <div className="flex-child">Launch</div>
+                </div>
               </Link>
             </Highlight>
           </Clickable>
           <Clickable className={classes.clickable} onClick={onNav}>
             <Highlight className={classes.button} animate layer="header">
               <Link className={classes.link} to="/upcoming">
-                <i className="material-icons">update</i>Upcoming
+                <div className="flex-container rounded-md hover:bg-gray-300">
+                  <div className="flex-child">
+                    <i className="material-icons">update</i>
+                  </div>
+                  <div className="flex-child">Upcoming</div>
+                </div>
               </Link>
             </Highlight>
           </Clickable>
           <Clickable className={classes.clickable} onClick={onNav}>
             <Highlight className={classes.button} animate layer="header">
               <Link className={classes.link} to="/history">
-                <i className="material-icons">history</i>History
+                <div className="flex-container rounded-md hover:bg-gray-300">
+                  <div className="flex-child">
+                    <i className="material-icons">history</i>
+                  </div>
+                  <div className="flex-child">History</div>
+                </div>
               </Link>
             </Highlight>
           </Clickable>

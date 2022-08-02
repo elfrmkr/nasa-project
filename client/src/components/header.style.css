@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 140%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease-in-out;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+.flex-child:first-child {
+  margin-top: 3.5px;
+}
+
+.topnav-right {
+  display: flex;
+  float: right;
+}
