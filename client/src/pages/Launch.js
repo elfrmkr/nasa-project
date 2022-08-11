@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Appear, Button, Loading, Paragraph } from "arwes";
 import Clickable from "../components/Clickable";
-import "./launch.style.css";
+// import "./launch.style.css";
 const Launch = (props) => {
   const selectorBody = useMemo(() => {
     return props.planets?.map((planet) => (
@@ -43,7 +43,7 @@ const Launch = (props) => {
           Launch Date
         </label>
         <input
-          className="inputFields"
+          className="inputFields text-gray-200"
           type="date"
           id="launch-day"
           name="launch-day"
