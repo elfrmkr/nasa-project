@@ -53,7 +53,6 @@ const AppLayout = (props) => {
   );
 
   const planets = usePlanets();
-
   return (
     <div className={classes.content}>
       <Header onNav={animateFrame} />

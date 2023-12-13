@@ -8,7 +8,8 @@ const { loadPlanetsData } = require("./models/planets.model");
 const server = http.createServer(app);
 
 async function startServer() {
-  await loadPlanetsData();
+  const data = await loadPlanetsData();
+  console.log("data", data)
 }
 
 server.listen(PORT, () => {
