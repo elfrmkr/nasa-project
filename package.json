@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/elfrmkr/nasa-project#readme",
   "dependencies": {
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "react-scripts": "^5.0.1"
   }
 }
