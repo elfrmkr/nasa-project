@@ -10,7 +10,7 @@ async function httpAddNewLaunch(req, res) {
   const launch = req.body;
 
   if (!launch.mission || !launch.rocket || !launch.launchDate
-    || !launch.destination) {
+    || !launch.target) {
     return res.status(200).json({
       error: 'Missing required launch property',
     });
