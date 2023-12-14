@@ -4,9 +4,6 @@ const API_URL = 'v1';
 async function httpGetPlanets() {
   const response = await fetch(`${API_URL}/planets`);
   const final = await response.json();
-
-  console.log(final);
-
   return final
 }
 
