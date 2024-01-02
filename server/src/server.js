@@ -14,7 +14,7 @@ const { loadPlanetsData } = require("./models/planets.model");
 const server = http.createServer(app);
 
 mongoose.connection.once('open', () => {
-  console.log("MongoDB connetion is ready!")
+  console.log("MongoDB connection is ready!")
 });
 
 mongoose.connection.on('error', (err) => {
