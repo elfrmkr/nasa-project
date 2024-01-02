@@ -16,6 +16,9 @@
     "nodemon": "^2.0.19",
     "supertest": "^6.3.3"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "csv-parse": "^5.3.0",
