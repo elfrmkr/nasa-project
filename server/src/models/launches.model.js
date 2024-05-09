@@ -49,7 +49,7 @@ async function populateLaunches() {
       launchDate: launchDoc['date_local'],
       upcoming: launchDoc['upcoming'],
       success: launchDoc['success'],
-      customers: [customers],
+      customers: customers,
     };
 
     console.log(`${launch.flightNumber}`);
