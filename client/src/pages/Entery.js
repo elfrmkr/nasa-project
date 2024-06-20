@@ -1,4 +1,3 @@
-import { Project, Words } from "arwes";
 import "./entry.style.css";
 const Entery = () => {
   return (

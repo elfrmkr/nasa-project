@@ -7,7 +7,6 @@ import {
 } from "arwes";
 import { Link } from "react-router-dom";
 import Clickable from "./Clickable";
-import Centered from "./Centered";
 import "./header.style.css";
 
 const styles = (theme) => ({
